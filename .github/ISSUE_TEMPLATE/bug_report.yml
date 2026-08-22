@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a problem in Signoff Studio
+title: "[Bug]: "
+labels:
+  - customer-reported
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please search existing issues first.
+  - type: checkboxes
+    id: searched
+    attributes:
+      label: I have checked the following
+      options:
+        - label: I searched existing issues and found nothing that matches this exact behavior
+          required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: This bug is
+      options:
+        - Blocking me completely
+        - Slowing me down but I can keep working
+        - Annoying
+        - Worked in a previous version, broken now
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - API client
+        - Runner
+        - Database workbench
+        - Scripting
+        - Import / export
+        - Installer / updates
+        - VS Code extension
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
